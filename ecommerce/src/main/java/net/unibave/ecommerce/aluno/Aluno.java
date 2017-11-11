@@ -1,4 +1,4 @@
-package net.unibave.ecommerce.rest;
+package net.unibave.ecommerce.aluno;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
