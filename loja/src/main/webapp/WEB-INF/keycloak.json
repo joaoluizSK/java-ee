@@ -1,0 +1,8 @@
+{
+  "realm": "master",
+  "auth-server-url": "http://localhost:8580/auth",
+  "ssl-required": "external",
+  "resource": "ecommerce-loja",
+  "public-client": true,
+  "bearer-only": true
+}

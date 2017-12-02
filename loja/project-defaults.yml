@@ -1,0 +1,23 @@
+swarm:
+  port:
+    offset: 0
+  deployment:
+    demo.war:
+      web:
+        login-config:
+          auth-method: KEYCLOAK
+        security-constraints:
+          - url-pattern: "/"
+            roles: [admin]
+  datasources:
+    jdbc-drivers:
+      org.postgresql:
+        driver-class-name: org.postgresql.Driver
+        xa-datasource-class-name: org.postgresql.xa.PGXADataSource
+        driver-module-name: org.postgresql
+    data-sources:
+      unibaveDS:
+        driver-name: org.postgresql
+        connection-url: jdbc:postgresql://localhost:5432/ecommerce
+        user-name: postgres
+        password: postgres
