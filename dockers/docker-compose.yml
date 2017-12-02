@@ -1,0 +1,20 @@
+version: '2'
+services:
+  postgresql-service:
+    ports:
+       - "5432:5432"
+    environment:
+      - POSTGRES_DB=ecommerce
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    image: "postgres"
+  activemq-service:
+    container_name: activemq-service
+    build: ./activemq-artemis/
+    ports:
+       - "8161:8161"
+       - "61616:61616"
+       - "5445:5445"
+       - "5672:5672"
+       - "1883:1883"
+       - "61613:61613"
