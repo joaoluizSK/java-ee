@@ -11,6 +11,9 @@ services:
   activemq-service:
     container_name: activemq-service
     build: ./activemq-artemis/
+    environment:
+      - ARTEMIS_USERNAME=admin
+      - ARTEMIS_PASSWORD=admin
     ports:
        - "8161:8161"
        - "61616:61616"
